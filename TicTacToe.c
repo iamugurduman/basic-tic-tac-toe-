@@ -1,5 +1,3 @@
-
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -7,8 +5,8 @@ char sira[10]={'0','1','2','3','4','5','6','7','8','9'};
 
 void ekran(){
     printf("TIC-TAC-TOE\n");
-    printf("1.Oyuncu =X\n");
-    printf("2.Oyuncu =O\n\n");
+    printf("1.Player =X\n");
+    printf("2.Player =O\n\n");
     printf("__  __  __ \n");
     printf("|%c | %c | %c|\n",sira[1],sira[2],sira[3]);
     printf("__  __  __\n");
@@ -70,12 +68,12 @@ int kontrolEt(){
         while(1==1){
 
 
-    printf("\n\nOyuncu-%d ->",oyuncu);
+    printf("\n\nPlayer-%d ->",oyuncu);
     scanf("%d",&secim);
 
          if(secim>9)
     {
-        printf("Yanlis deger girdiniz.");
+        printf("You have entered invalid value.");
     }
         else
         {
@@ -130,13 +128,13 @@ int kontrolEt(){
     if(sonuc==1)
         {
         ekran();
-        printf("\n\nOyuncu-%d kazandi!!!\n",oyuncu);
+        printf("\n\nPlayer-%d Has Won!!!\n",oyuncu);
         break;
         }
     else if(sonuc==0)
         {
         ekran();
-        printf("\nBerabere");
+        printf("\nDRAW!!!");
         break;
         }
     else
